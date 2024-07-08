@@ -1,4 +1,4 @@
-#bubble sort
+#binary search with bubble sort
 lst_us = [102, 5666, 2, 52, 98, 4, 1000]
 n = 102 
 
