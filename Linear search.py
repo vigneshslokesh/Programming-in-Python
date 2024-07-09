@@ -30,18 +30,19 @@ def binary_search(a,x):
         mid = (l+u) // 2
 
         if(a[mid] == x):
-            print("Element found at: ",int(mid+1))
+            globals() ['pos'] = mid
             return True
         else:
             if x < a[mid]:
                 u = mid - 1
             else:
                 l = mid + 1
-    print("Element not found")
-    return False
-
+    
 a = []
 for i in range(1,11):
     a.append(i)
 
-binary_search(a,4)
+if(binary_search(a,4)):
+    print("Element found at: ",int(pos+1))
+else:
+    print('Not found')
