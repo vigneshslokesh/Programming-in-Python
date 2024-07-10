@@ -40,3 +40,4 @@ else:
     print("You are wrong :( ")
 
 print("Your score card : "+str(count)+" / 4")
+print("Your score card : "+str((count/4)*100)+" %")
