@@ -1,7 +1,13 @@
+from cryptography.fernet import Fernet
 
 master_pwd = input('What is the master password? ')
 
+def write_key():
+    key = Fernet.generate_key()
+    with open("key.key","wb") as key_file:
+        key_file.write(key)
 
+write_key()
 
 def view():
     with open('passwords.txt', 'r') as f:
@@ -22,9 +28,12 @@ def add():
 
 while True:
     mode = input("Would you like to add a new password or view existing passwords (view, add)? ").lower()
-    if mode == "view":
+    if mode == "q":
+        quit
+    elif mode == "view":
         view()
     elif mode == "add":
         add()
     else:
         print("Invalid mode.")
+        continue
