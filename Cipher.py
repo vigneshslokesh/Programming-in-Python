@@ -13,6 +13,7 @@ alpha = 'abcdefghijklmnopqrstuvwxyz'
 x = 'india'
 # I expect to output joejb
 
+# encrypting with k as the key
 y=''
 i=0
 k=20
@@ -23,6 +24,8 @@ y=y+(alpha[(((alpha.index(x[i+3]))+k)%26)])
 y=y+(alpha[(((alpha.index(x[i+4]))+k)%26)])
 
 print(y)
+
+# decrypting with k as the key
 
 z=''
 z=z+(alpha[(((alpha.index(y[i]))-k)%26)])
