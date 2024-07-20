@@ -9,7 +9,10 @@ print("My name is Octa.\n\tI am from Bangalore")
 
 x = 'This is a string'
 y = 'This is also a string'
-z = 'first line'
+z = '''first line
+second line
+third line'''
+#statements exceeding more than single line are quoted under three quotes
 
 print(x)
 print(y)
