@@ -23,3 +23,12 @@ y=y+(alpha[(((alpha.index(x[i+3]))+k)%26)])
 y=y+(alpha[(((alpha.index(x[i+4]))+k)%26)])
 
 print(y)
+
+z=''
+z=z+(alpha[(((alpha.index(y[i]))-k)%26)])
+z=z+(alpha[(((alpha.index(y[i+1]))-k)%26)])
+z=z+(alpha[(((alpha.index(y[i+2]))-k)%26)])
+z=z+(alpha[(((alpha.index(y[i+3]))-k)%26)])
+z=z+(alpha[(((alpha.index(y[i+4]))-k)%26)])
+
+print(z)
