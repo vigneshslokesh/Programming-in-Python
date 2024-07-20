@@ -17,3 +17,16 @@ third line'''
 print(x)
 print(y)
 print(z)
+
+#methods in python
+m = 'pytHoN sTrIng mEthOdS'
+print(m.lower())
+print(m.upper())
+print(m.capitalize())
+print(m.title())
+print(m.swapcase())
+
+n = 'Python'
+print(n.islower())
+print(n.isupper())
+print(n.istitle())
