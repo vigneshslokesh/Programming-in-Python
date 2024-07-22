@@ -8,7 +8,7 @@ class Aircraft:
 
     def __str__(self): # human readable output of the object and easy to understand
         if not self.intermediate_cities:
-            intermediate_cities_str = "Direct Flight"
+            intermediate_cities_str = self.intermediate_cities.append("Direct Flight")
         else:
             intermediate_cities_str = ", ".join(self.intermediate_cities)
             
