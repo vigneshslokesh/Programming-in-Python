@@ -24,4 +24,11 @@ class Aircraft_database:
             
         self.aircrafts.romove(aircraft)
         print(f"Aircraft {aircraft.registration}, removed successfully.")
+
+    # def view_aircrafts(self):
+    #     if not self.aircrafts:
+    #         print("No aircrafts in the database.")
+    #     for aircraft in self.aircrafts:
+    #         print(aircraft)
+
 db = Aircraft_database()
