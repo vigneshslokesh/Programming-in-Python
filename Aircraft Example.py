@@ -15,7 +15,13 @@ class Aircraft_database:
     def __init__(self): #initializing a variable aircrafts with list datastructure to store all the list of aircrafts
         self.aircrafts = []
 
-    def add_aircrafts(self):
-        pass
+    def add_aircrafts(self, aircraft):
+        self.aircrafts.append(aircraft)
+        print(f"Aircraft {aircraft.registration}, added successfully.")
 
+    def remove_aircrafts(self, aircraft):
+        for aircraft in self.aircrafts:
+            
+        self.aircrafts.romove(aircraft)
+        print(f"Aircraft {aircraft.registration}, removed successfully.")
 db = Aircraft_database()
