@@ -1,5 +1,8 @@
 # imoporting libraries
-import math # math libraries - log(), pow()
+# structure - import (library name)
+# calling function - (libname).function()
+
+import math # math libraries - log(), pow(), cos(), sin(), factorial
 import random
 # random - randint, random, randrange
 
