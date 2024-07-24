@@ -8,13 +8,24 @@
 # import random
 # # random - randint, random, randrange
 
-# import calendar #importing calendar
+import calendar #importing calendar
 
-# # print(calendar.month(2024, 7)) # specific month
-# print(calendar.calendar(2024)) # specific year
+print(calendar.month(2024, 7)) # specific month
+print(calendar.calendar(2024)) # specific year
 
 # <--------->
-from calendar import *
-# to bring entire content everything in the calendar library into this python program
+from calendar import month, calendar # get only the necessary content
+# # to bring entire content everything in the calendar library into this python program
 
 print(month(2024, 11))
+print(calendar(2024))
+
+# <--------->
+# moving the entire library into a variable
+
+import calendar as c
+print(c.month(2024, 11))
+
+from calendar import month as m
+print(m(2024, 11))
+
