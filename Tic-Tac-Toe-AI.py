@@ -42,3 +42,21 @@ def minimax(board, depth, is_maximizing):
                     board[i][j] = ' '
                     min_eval = min(min_eval, eval)
         return min_eval
+
+
+#determines the best move for the current player and returns a tuple representing the position
+def best_move(board):
+    best_val = float('-inf')
+    best_move = None
+
+    for i in range(3):
+        for j in range(3):
+            if board[i][j] == ' ':
+                board[i][j] = 'O'
+                move_val = minimax(board, 0, False)
+                board[i][j] = ' '
+                if move_val > best_val:
+                    best_val = move_val
+                    best_move = (i, j)
+
+    return best_move
