@@ -11,3 +11,34 @@ def check_winner(board, player):
         return True
     return False
 
+def is_board_full(board):
+    return all(all(cell != ' ' for cell in row) for row in board)
+
+def minimax(board, depth, is_maximizing):
+    if check_winner(board, 'X'):
+        return -1
+    if check_winner(board, 'O'):
+        return 1
+    if is_board_full(board): #if game is full, terminate
+        return 0
+
+    if is_maximizing: #recursive approach that fills board with Os
+        max_eval = float('-inf')
+        for i in range(3):
+            for j in range(3):
+                if board[i][j] == ' ':
+                    board[i][j] = 'O'
+                    eval = minimax(board, depth + 1, False) #recursion
+                    board[i][j] = ' '
+                    max_eval = max(max_eval, eval)
+        return max_eval
+    else: #recursive approach that fills board with Xs
+        min_eval = float('inf')
+        for i in range(3):
+            for j in range(3):
+                if board[i][j] == ' ':
+                    board[i][j] = 'X'
+                    eval = minimax(board, depth + 1, True) #recursion
+                    board[i][j] = ' '
+                    min_eval = min(min_eval, eval)
+        return min_eval
