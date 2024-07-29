@@ -60,3 +60,18 @@ def best_move(board):
                     best_move = (i, j)
 
     return best_move
+
+def make_move(row, col):
+    if board[row][col] == ' ':
+        board[row][col] = 'X'
+        buttons[row][col].config(text='X')
+        if check_winner(board, 'X'):
+            messagebox.showinfo("Tic-Tac-Toe", "You win!")
+            root.quit()
+        elif is_board_full(board):
+            messagebox.showinfo("Tic-Tac-Toe", "It's a draw!")
+            root.quit()
+        else:
+            ai_move()
+    else:
+        messagebox.showerror("Error", "Invalid move")
