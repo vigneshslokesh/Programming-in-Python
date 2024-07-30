@@ -15,3 +15,4 @@ while(i<=n): # less than or equal to - cannot be greater than n
 print(answer)
 
 #i keeps in incrementing
+#CTRL + C -> exit code
