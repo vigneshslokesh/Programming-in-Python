@@ -23,3 +23,8 @@ while(year!=1947): #until this statement/condition becomes false
 print("Wow! you got it right.")
 
 # while works like this
+    # while <condition>
+        # write whatever you want here
+        # write whatever you want here
+
+    # loop exits when the condition is wrong. runs until the condition becomes false
