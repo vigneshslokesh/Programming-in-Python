@@ -1,4 +1,14 @@
-print("Welcome to Band name generator!")
-city = input("Enter the city you grew up in: \n")
-pet = input("Enter your pet name: \n")
-print("Your band name could be: "+city+" "+pet)
+print("When did India get its independence (year)?")
+year = int(input())
+
+if (year==1947):
+    print("Great! you are correct.")
+
+else:
+    print("Comeon dont you know this?")
+    print("Thats okay, I will give you a second chance.")
+    year = int(input())
+    if(year==1947):
+        print("You got it right!")
+    else:
+        print("Failed in second attempt too?")
