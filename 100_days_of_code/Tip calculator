@@ -10,9 +10,20 @@
 # print(f"Your score is {score}, your height is {height}, you are winning is {isWinning}")
 
 print("Welcome to tip calculator!")
+
 bill = float(input("What was the total bill? "))
+# input the bill amount in float
+
 tip = int(input("How much tip would you like to give? 10, 12, or 15? "))
+# input the tip percent in int
+
 total_bill = bill * (1+(tip/100))
+# total bill calculated on thr basis of the percentage of the tip over the bill amount
+
 split = int(input("How many people to split the bill? "))
 final_bill = total_bill/split
+# split the final bill amount with the total number of people splitting the bill
+
 print(f"Each person should pay: {round(final_bill, 2)}")
+# print the amount each person has to pay with rounding the float value to two decimal places using the f-string because the value is of 
+# different data type i.e. float 
