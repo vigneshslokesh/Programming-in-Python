@@ -11,7 +11,7 @@
 
 print("Welcome to tip calculator!")
 
-bill = float(input("What was the total bill? "))
+bill = float(input("What was the total bill? $"))
 # input the bill amount in float
 
 tip = int(input("How much tip would you like to give? 10, 12, or 15? "))
@@ -21,9 +21,11 @@ total_bill = bill * (1+(tip/100))
 # total bill calculated on thr basis of the percentage of the tip over the bill amount
 
 split = int(input("How many people to split the bill? "))
-final_bill = total_bill/split
+bill_per_person = total_bill/split
+final_bill = round(bill_per_person, 2)
+final_bill = "{:.2f}".format(bill_per_person) # {:.2f}.format() ---> fills 0 if no digit at 2nd decimal place
 # split the final bill amount with the total number of people splitting the bill
 
-print(f"Each person should pay: {round(final_bill, 2)}")
+print(f"Each person should pay: ${final_bill}")
 # print the amount each person has to pay with rounding the float value to two decimal places using the f-string because the value is of 
 # different data type i.e. float 
