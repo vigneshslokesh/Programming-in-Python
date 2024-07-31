@@ -1,4 +1,5 @@
-def reversefunction(num):
+def palindrome(num):
+    org_num = num
     rev_num = 0
 
     while(num>0):
@@ -8,9 +9,10 @@ def reversefunction(num):
         num = num // 10
         # remove the last digit from num
 
-    return rev_num
+    return org_num == rev_num
 
 number = int(input("Enter a number: "))
-absolute = abs(number)
-reversed_num = reversefunction(number)
-print(reversed_num)
+if palindrome(number):
+    print("This is a Palindrome")
+else:
+    print("This is not a Palindrome")
