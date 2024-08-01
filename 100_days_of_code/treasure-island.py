@@ -13,7 +13,7 @@ print("Your mission is to find the treasure.")
 crossover = input("You are in a crossover, Do you wanna go 'left' or 'right'?")
 if(crossover == "left"):
     choice = input("There is a lake which has a island in centre, do you wanna 'swim' or 'wait' foor the boat?")
-    if(choice == "swim"):
+    if(choice == "wait"):
         door = input("You reached safely. There is a blue door, red door, yellow door, which one do you wanna open?")
         if door == "blue":
             print("Eaten by beasts. Game Over.")
