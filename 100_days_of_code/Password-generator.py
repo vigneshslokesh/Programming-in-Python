@@ -26,10 +26,10 @@ for num in range(0, nr_numbers):
     password_list += random_num
     # print(password)
 random.shuffle(password_list)
-print(password_list)
+# print(password_list)
 
 password = ""
 for char in password_list:
     password += char
 
-print(password)
+print(f"Your password is: {password}")
