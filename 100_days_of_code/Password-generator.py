@@ -14,12 +14,17 @@ password = ""
 for char in range(0, nr_letters):
     random_char = random.choice(letters)
     password += random_char
-    print(password)
+    # print(password)
+
+for symb in range(0, nr_symbols):
+    random_symb = random.choice(symbols)
+    password += random_symb
+    # print(password)    
 
 for num in range(0, nr_numbers):
     random_num = random.choice(numbers)
     password += random_num
-    print(password)
+    # print(password)
 
 #Hard Level - Order of characters randomised:
 #e.g. 4 letter, 2 symbol, 2 number = g^2jk8&P
