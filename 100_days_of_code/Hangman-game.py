@@ -93,6 +93,12 @@ while not gameover:
         else:
             display += '_'
 
+    if guess not in chosen_word:
+        lives -= 1
+        if lives == 0:
+            gameover = True 
+            print("You lose!")
+
     print(display)
 
     if '_' not in display:
