@@ -13,7 +13,10 @@ chosen_word = random.choice(word_list) # more line saving and efficient
 print(chosen_word) 
 
 guess = input("Guess a letter: ").lower()
-if guess in chosen_word:
-    print('Correct')
-else:
-    print('Wrong')
+print(guess)
+
+for letter in chosen_word:
+    if letter == guess:
+        print('Correct')
+    else:
+        print('Wrong')
