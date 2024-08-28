@@ -33,3 +33,4 @@ for letter in chosen_word:
     else:
         display += '_'
 
+print(display)
