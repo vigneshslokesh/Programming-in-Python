@@ -1,3 +1,54 @@
+stages = ['''
+  +---+
+  |   |
+      |
+      |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+      |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+  |   |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+ /|   |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ /    |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ / \  |
+      |
+=========''']
+
 import random
 word_list = ["lorey","james","mermaid"]
 
@@ -23,6 +74,7 @@ print(place_holder)
 
 correctletter = []
 gameover = False
+lives = 6
 
 while not gameover: 
     guess = input("Guess a letter: ").lower()
