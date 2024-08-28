@@ -19,18 +19,18 @@ place_holder = ""
 for pos in range(len(chosen_word)):
     place_holder += '_'
 print(place_holder)
-
-guess = input("Guess a letter: ").lower()
-print(guess)
-
-
-display = ""
+while True: 
+    guess = input("Guess a letter: ").lower()
+    # print(guess)
 
 
-for letter in chosen_word:
-    if letter == guess:
-        display += letter
-    else:
-        display += '_'
+    display = ""
 
-print(display)
+
+    for letter in chosen_word:
+        if letter == guess:
+            display += letter
+        else:
+            display += '_'
+
+    print(display)
