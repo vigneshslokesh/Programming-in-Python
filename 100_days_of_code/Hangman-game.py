@@ -14,9 +14,11 @@ print(chosen_word)
 
 # for i in chosen_word:
 #     print('_', end='')
+
 place_holder = ""
-for pos in range(0,len(chosen_word)):
+for pos in range(len(chosen_word)):
     place_holder += '_'
+print(place_holder)
 
 guess = input("Guess a letter: ").lower()
 print(guess)
