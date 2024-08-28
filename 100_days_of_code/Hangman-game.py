@@ -10,7 +10,13 @@ word_list = ["lorey","james","mermaid"]
 #shuffle
 
 chosen_word = random.choice(word_list) # more line saving and efficient
-print(chosen_word) 
+print(chosen_word)
+
+# for i in chosen_word:
+#     print('_', end='')
+place_holder = ""
+for pos in range(0,len(chosen_word)):
+    place_holder += '_'
 
 guess = input("Guess a letter: ").lower()
 print(guess)
