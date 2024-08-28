@@ -18,8 +18,11 @@ print(chosen_word)
 place_holder = ""
 for pos in range(len(chosen_word)):
     place_holder += '_'
+
 print(place_holder)
-while True: 
+
+gameover = False
+while not gameover: 
     guess = input("Guess a letter: ").lower()
     # print(guess)
 
@@ -34,3 +37,7 @@ while True:
             display += '_'
 
     print(display)
+
+    if '_' not in display:
+        gameover = True
+        print('You win!')
