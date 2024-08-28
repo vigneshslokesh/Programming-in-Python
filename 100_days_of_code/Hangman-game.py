@@ -21,7 +21,9 @@ for pos in range(len(chosen_word)):
 
 print(place_holder)
 
+correctletter = []
 gameover = False
+
 while not gameover: 
     guess = input("Guess a letter: ").lower()
     # print(guess)
@@ -30,8 +32,11 @@ while not gameover:
     display = ""
 
 
-    for letter in chosen_word:
+    for letter in chosen_word:  #confusing!!!!
         if letter == guess:
+            display += letter
+            correctletter.append(guess)
+        elif letter in correctletter:
             display += letter
         else:
             display += '_'
