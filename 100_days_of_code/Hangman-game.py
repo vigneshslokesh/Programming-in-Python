@@ -1,57 +1,9 @@
-stages = ['''
-  +---+
-  |   |
-      |
-      |
-      |
-      |
-=========''', '''
-  +---+
-  |   |
-  O   |
-      |
-      |
-      |
-=========''', '''
-  +---+
-  |   |
-  O   |
-  |   |
-      |
-      |
-=========''', '''
-  +---+
-  |   |
-  O   |
- /|   |
-      |
-      |
-=========''', '''
-  +---+
-  |   |
-  O   |
- /|\  |
-      |
-      |
-=========''', '''
-  +---+
-  |   |
-  O   |
- /|\  |
- /    |
-      |
-=========''', '''
-  +---+
-  |   |
-  O   |
- /|\  |
- / \  |
-      |
-=========''']
+
 
 import random
-word_list = ["lorey","james","mermaid"]
 
+from hangman_words import word_list
+from hangman_art import stages
 # rand_num = random.randint(0,2)
 # chosen_word = word_list[rand_num]
 
@@ -59,6 +11,8 @@ word_list = ["lorey","james","mermaid"]
 #randint
 #choice
 #shuffle
+# print(logo)
+
 
 chosen_word = random.choice(word_list) # more line saving and efficient
 print(chosen_word)
@@ -77,9 +31,13 @@ gameover = False
 lives = 6
 
 while not gameover: 
+
+    print(f"****************** {lives} / 6 LIVES LEFT")
     guess = input("Guess a letter: ").lower()
     # print(guess)
 
+    if guess in correctletter:
+        print(f'You have already guessed the {guess}')
 
     display = ""
 
@@ -95,14 +53,15 @@ while not gameover:
 
     if guess not in chosen_word:
         lives -= 1
+        print(f"You guessed {guess}, that's not in the word. You loose a life")
         if lives == 0:
             gameover = True 
-            print("You lose!")
+            print(f"******************You lose! it was {chosen_word}******************")
 
     print(display)
 
     if '_' not in display:
         gameover = True
-        print('You win!')
+        print('******************You win!******************')
 
     print(stages[lives])
