@@ -13,13 +13,14 @@ from hangman_art import stages
 #shuffle
 # print(logo)
 
-
+# choosing a random word from the words file
 chosen_word = random.choice(word_list) # more line saving and efficient
 print(chosen_word)
 
 # for i in chosen_word:
 #     print('_', end='')
 
+# creating place holders for the random word
 place_holder = ""
 for pos in range(len(chosen_word)):
     place_holder += '_'
