@@ -20,4 +20,19 @@ def encrypt(original_text, shift_amount):
 
     print(f'Here is the encode result: {encoded}')
 
-encrypt(original_text='text',shift_amount=shift)   
+encrypt(original_text=text,shift_amount=shift)   
+
+# TODO-1: Create a function called 'decrypt()' that takes 'original_text' and 'shift_amount' as inputs.
+# TODO-2: Inside the 'decrypt()' function, shift each letter of the 'original_text' *backwards* in the alphabet
+#  by the shift amount and print the decrypted text.
+
+def decrypt(original_text, shift_amount):
+    decoded =''
+    for letter in original_text:
+        shifted_pos = alphabet.index(letter) - shift_amount    
+        shifted_pos = shifted_pos % len(alphabet)   # mod functionality loop inside the list to overcome out of range error
+        decoded += alphabet[shifted_pos]
+
+    print(f'Here is the decoded result: {decoded}')
+
+decrypt(original_text=text,shift_amount=shift)
