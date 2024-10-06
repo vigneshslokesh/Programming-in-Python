@@ -18,7 +18,7 @@ def highest_bid(bidder_dict):
 
 while cont:
     name = input("What's your name: ")
-    bid = int(input("What's your bid: Rs"))
+    bid = int(input("What's your bid: Rs "))
     others = input("Are there other person? (Type 'yes' to continue else type 'no' to exit): ").lower()
     bidders[name] = bid
 
