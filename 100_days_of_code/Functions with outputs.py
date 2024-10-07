@@ -22,6 +22,7 @@
 
 # function with multiple return
 def full_name(f_name,l_name):
+    """"Docstrings"""
     if f_name =='' and l_name == '':
         return ("Enter a valid name!")
     first = f_name.title()
