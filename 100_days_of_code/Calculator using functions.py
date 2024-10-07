@@ -12,28 +12,34 @@ def div(num1, num2):
 
 opt = {"+": add, "-": sub, "*": mul, "/": div}
 
+
 # print(opt["*"](2,2))
 
-n1 = float(input("Enter the first number: "))
 
-accumulate = True
-while accumulate:
-    
-    for i in opt:
-        print(i)
-    option = input("Enter the mathematical operator: ")
-    n2 = float(input("Enter the second number: "))
+def claculator():
+    n1 = float(input("Enter the first number: "))
 
-    ans = opt[option](n1,n2)
-    print(f"{n1} {option} {n2} = {ans}")
-    cont = input(f"Type 'y' to continue calculating with {ans}, or type 'n' to start a new calculation: ").lower()
-
-    if cont == 'y':
-        n1 = ans
+    accumulate = True
+    while accumulate:
         
-        
-    
+        for i in opt:
+            print(i)
+        option = input("Enter the mathematical operator: ")
+        n2 = float(input("Enter the second number: "))
 
+        ans = opt[option](n1,n2)
+        print(f"{n1} {option} {n2} = {ans}")
+        cont = input(f"Type 'y' to continue calculating with {ans}, or type 'n' to start a new calculation: ").lower()
+
+        if cont == 'y':
+            n1 = ans
+        
+        else: 
+            accumulate = False
+            print("\n" * 10)
+            claculator()
+    
+claculator()
 
 
 
