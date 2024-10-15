@@ -1,8 +1,11 @@
-enemies = 1
+game_level = 3
+enemies = ["Skeleton", "Zombie", "Alien"]
 
-def func_dem():
-    enemies = 2
-    print(f"Your enemies inside {enemies}")
+def create_enemy():
+    new_enemy = ""
+    if game_level < 5:
+        new_enemy = enemies[0]
+    
+    print(new_enemy)
 
-func_dem()
-print(f"Your enemies outside {enemies}")
+create_enemy()
