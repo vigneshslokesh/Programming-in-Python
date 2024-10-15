@@ -4,7 +4,7 @@ import random
 def predictor(attempts):
     while attempts>0:
         print(f"You have {attempts} attempts left to guess a number.")
-        print(f"Computer number is {the_num}")
+        # print(f"Computer number is {the_num}")
         guess = int(input("Make a guess: "))
         if guess == the_num:
             print(f"Your guess is correct: {guess}")
