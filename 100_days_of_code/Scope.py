@@ -1,11 +1,10 @@
-game_level = 3
-enemies = ["Skeleton", "Zombie", "Alien"]
+# global scope
+enemies = 1
 
-def create_enemy():
-    new_enemy = ""
-    if game_level < 5:
-        new_enemy = enemies[0]
-    
-    print(new_enemy)
+def new_enemies():
+    global enemies
+    enemies += 1
+    print(f"Inside Enemies: {enemies}")
 
-create_enemy()
+new_enemies()
+print(f"Outside Enemies: {enemies}")
