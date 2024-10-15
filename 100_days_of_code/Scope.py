@@ -15,7 +15,14 @@
 PI = 3.14159
 GOOGLE_URL = "www.google.com"
 
-def my_func():
-    print(GOOGLE_URL)
+# def my_func():
+#     print(GOOGLE_URL)
 
-my_func()
+# my_func()
+
+def a_function(a_parameter):
+    a_variable = 15
+    return a_parameter
+ 
+a_function(10)
+print(a_variable)
