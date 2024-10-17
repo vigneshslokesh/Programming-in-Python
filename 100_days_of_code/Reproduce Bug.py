@@ -1,10 +1,4 @@
-game_level = 10
-enemies = ["Skeleton", "Zombie", "Alien"]
-
-
-def create_enemy():
-    new_enemy = ""
-    if game_level < 5:
-        new_enemy = enemies[0]
-
-    print(new_enemy)
+from random import randint
+dice_images = ["❶", "❷", "❸", "❹", "❺", "❻"]
+dice_num = randint(0, 6)
+print(dice_images[dice_num])
