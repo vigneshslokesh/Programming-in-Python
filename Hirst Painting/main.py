@@ -20,13 +20,15 @@ screen = t.Screen()
 
 t.colormode(255)
 color_list = [(144, 76, 50), (188, 165, 117), (248, 244, 246), (166, 153, 36), (14, 46, 85), (139, 185, 176), (146, 56, 81), (42, 110, 136), (59, 120, 99), (145, 170, 177), (87, 35, 30), (64, 152, 169)]
-print(turtle.heading())
+# print(turtle.heading())
 
+turtle.hideturtle()
 turtle.setheading(225)
 turtle.penup()
 turtle.forward(300)
 turtle.setheading(0)
 num_of_dots = 100
+
 
 for dot_count in range(1, num_of_dots+1): 
     colour = random.choice(color_list)
