@@ -9,6 +9,7 @@ class Ball(Turtle):
         self.penup()
         self.x_move = 6
         self.y_move = 6
+        self.time_f = 0.04
         
     def move(self):
         new_x = self.xcor() + self.x_move
@@ -20,7 +21,9 @@ class Ball(Turtle):
 
     def hit(self):
         self.x_move *= -1
+        self.time_f *= 0.9
 
     def reset(self):
         self.goto(0,0)
         self.hit()
+        self.time_f = 0.04
